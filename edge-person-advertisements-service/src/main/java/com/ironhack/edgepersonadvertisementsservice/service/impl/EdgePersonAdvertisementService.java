@@ -12,9 +12,11 @@ import org.springframework.cloud.circuitbreaker.resilience4j.Resilience4JCircuit
 import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-public class EdgePersonAdvertisementController implements IEdgePersonAdvertisementService {
+@Service
+public class EdgePersonAdvertisementService implements IEdgePersonAdvertisementService {
 
     @Autowired
     private AdvertisementClient advertisementClient;
